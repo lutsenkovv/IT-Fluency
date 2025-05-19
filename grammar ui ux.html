@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT Fluency - Grammar for UI/UX Designers</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+      .accordion-button {
+        font-weight: bold;
+        color: #0d6efd;
+      }
+      .flashcard {
+        perspective: 1000px;
+        margin: 10px 0;
+      }
+      .flashcard-inner {
+        position: relative;
+        width: 100%;
+        height: 120px;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        cursor: pointer;
+      }
+      .flashcard-inner.flip {
+        transform: rotateY(180deg);
+      }
+      .flashcard-front,
+      .flashcard-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        background: white;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        padding: 10px;
+        text-align: center;
+      }
+      .flashcard-back {
+        background-color: #0d6efd;
+        color: white;
+        transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">IT Fluency</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="/">Головна</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="про нас.html">Про нас</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+                >Курси</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <h1 class="fw-bold text-center mb-4">
+        Grammar Guide для UI/UX Дизайнера
+      </h1>
+
+      <div class="mb-4">
+        <p>
+          Чому граматика важлива для дизайнера? Коли ви коментуєте макети,
+          описуєте функціонал або пишете UI-тексти, правильна англійська
+          допомагає уникнути плутанини й робить вашу комунікацію професійною.
+        </p>
+      </div>
+
+      <div class="accordion" id="grammarAccordion">
+        <!-- Present Simple vs Present Continuous -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+            >
+              1. Опис поточних і регулярних дій
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#grammarAccordion"
+          >
+            <div class="accordion-body">
+              <p><strong>Present Simple</strong> ➔ регулярні дії</p>
+              <p>
+                <strong>Present Continuous</strong> ➔ те, що відбувається зараз
+              </p>
+
+              <ul>
+                <li>
+                  <strong>Present Simple:</strong> The button redirects users to
+                  the homepage.
+                </li>
+                <li>
+                  <strong>Present Continuous:</strong> I’m fixing the
+                  responsiveness issue now.
+                </li>
+              </ul>
+
+              📌 У описах макетів і коментарях важливо правильно обирати час!
+            </div>
+          </div>
+        </div>
+
+        <!-- Passive Voice -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+            >
+              2. Пасивний стан у документації
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#grammarAccordion"
+          >
+            <div class="accordion-body">
+              <p>
+                <strong>Passive Voice</strong> використовується, щоб підкреслити
+                дію, а не того, хто її виконує.
+              </p>
+              <ul>
+                <li>
+                  The form <strong>is submitted</strong> after clicking the
+                  button.
+                </li>
+                <li>
+                  The modal window <strong>is opened</strong> automatically.
+                </li>
+              </ul>
+
+              📌 У специфікаціях і нотатках handoff часто використовують пасив!
+            </div>
+          </div>
+        </div>
+
+        <!-- Modals -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+            >
+              3. Модальні дієслова: рекомендації та правила
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#grammarAccordion"
+          >
+            <div class="accordion-body">
+              <p>
+                <strong>Can, Should, Must</strong> ➔ для рекомендацій та
+                обов'язкових вимог
+              </p>
+              <ul>
+                <li>
+                  Users <strong>must</strong> fill in the required fields.
+                </li>
+                <li>You <strong>should</strong> add a confirmation message.</li>
+                <li>The app <strong>can</strong> suggest similar items.</li>
+              </ul>
+
+              📌 У поясненнях логіки важливо вживати правильні модальні
+              дієслова!
+            </div>
+          </div>
+        </div>
+
+        <!-- If-clauses -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFour"
+            >
+              4. Умовні речення в описі функціоналу
+            </button>
+          </h2>
+          <div
+            id="collapseFour"
+            class="accordion-collapse collapse"
+            data-bs-parent="#grammarAccordion"
+          >
+            <div class="accordion-body">
+              <p><strong>If-clauses</strong> ➔ важливі для опису залежностей</p>
+              <ul>
+                <li>
+                  If the user forgets the password, they receive a reset email.
+                </li>
+                <li>If the payment fails, an error message appears.</li>
+              </ul>
+
+              📌 Умовні речення чітко описують сценарії використання продукту.
+            </div>
+          </div>
+        </div>
+
+        <!-- Microcopy structure -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFive"
+            >
+              5. Структура коротких текстів (Microcopy)
+            </button>
+          </h2>
+          <div
+            id="collapseFive"
+            class="accordion-collapse collapse"
+            data-bs-parent="#grammarAccordion"
+          >
+            <div class="accordion-body">
+              <p>
+                <strong>Microcopy</strong> ➔ це короткі повідомлення для
+                взаємодії з інтерфейсом:
+              </p>
+              <ul>
+                <li>
+                  <strong>Button labels:</strong> Save changes / Try again
+                </li>
+                <li><strong>Form hints:</strong> Enter your email address</li>
+                <li>
+                  <strong>Error messages:</strong> Password must be at least 8
+                  characters.
+                </li>
+              </ul>
+
+              📌 Пиши коротко, зрозуміло, орієнтуючись на дію користувача!
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flashcards for practice -->
+      <h2 class="mt-5 mb-3 text-center text-primary">
+        🎯 Міні-Флешкарти для тренування
+      </h2>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div
+            class="flashcard"
+            onclick="this.querySelector('.flashcard-inner').classList.toggle('flip')"
+          >
+            <div class="flashcard-inner">
+              <div class="flashcard-front">The user clicks the button.</div>
+              <div class="flashcard-back">Present Simple: регулярна дія.</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div
+            class="flashcard"
+            onclick="this.querySelector('.flashcard-inner').classList.toggle('flip')"
+          >
+            <div class="flashcard-inner">
+              <div class="flashcard-front">
+                The data is saved automatically.
+              </div>
+              <div class="flashcard-back">
+                Passive Voice: зосередження на дії.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div
+            class="flashcard"
+            onclick="this.querySelector('.flashcard-inner').classList.toggle('flip')"
+          >
+            <div class="flashcard-inner">
+              <div class="flashcard-front">
+                You should provide error feedback.
+              </div>
+              <div class="flashcard-back">
+                Модальне дієслово для рекомендації.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Нема потреби додаткового JS, усе працює через Bootstrap і мінімальний код для флешкарт
+    </script>
+  </body>
+</html>

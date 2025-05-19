@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT Fluency</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .btn-hover-effect:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: 0.3s;
+      }
+      .card-icon {
+        font-size: 2rem;
+        color: #0d6efd;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Навігаційна панель -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">IT Fluency</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="/">Головна</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="про нас.html">Про нас</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                Курси
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <!-- Кнопка Реєстрації -->
+          <button
+            class="btn btn-outline-light"
+            data-bs-toggle="modal"
+            data-bs-target="#registerModal"
+          >
+            Реєстрація
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Основний вміст -->
+    <main class="container mt-4">
+      <h1 class="fw-bold text-center mb-4">IT Fluency</h1>
+      <p class="text-center">Вивчай англійську мову для ІТ-професій</p>
+      <section class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+        <!-- UI/UX Designer -->
+        <div class="col">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <div class="card-icon"><i class="bi bi-palette-fill"></i></div>
+              <h5 class="card-title">UI/UX-дизайнер</h5>
+              <p class="card-text">
+                Інтерфейси, інструменти, клієнти — все англійською. Знання мови
+                обов'язкове!
+              </p>
+              <a
+                href="grammar ui ux.html"
+                class="btn btn-primary m-1 btn-hover-effect"
+                >Grammar</a
+              >
+              <a
+                href="speaking ui ux.html"
+                class="btn btn-primary m-1 btn-hover-effect"
+                >Speaking</a
+              >
+              <a
+                href="listening ui ux.html"
+                class="btn btn-primary m-1 btn-hover-effect"
+                >Listening</a
+              >
+              <a
+                href="vocabulary ui ux.html"
+                class="btn btn-primary m-1 btn-hover-effect"
+                >Vocabulary</a
+              >
+              <a
+                href="test ui ux.html"
+                class="btn btn-primary m-1 btn-hover-effect"
+                >Test</a
+              >
+              <a
+                href="writing ui ux.html"
+                class="btn btn-primary m-1 btn-hover-effect"
+                >Writing</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Software Developer -->
+        <div class="col">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <div class="card-icon"><i class="bi bi-code-slash"></i></div>
+              <h5 class="card-title">Software Developer</h5>
+              <p class="card-text">
+                Англійська для розробників ПЗ, технічної документації,
+                код-рев'ю.
+              </p>
+              <a
+                href="grammar s d.html"
+                class="btn btn-primary m-1 btn-hover-effect"
+                >Grammar</a
+              >
+              <a
+                href="speaking s d.html"
+                class="btn btn-primary m-1 btn-hover-effect"
+                >Speaking</a
+              >
+              <a
+                href="listening s d.html"
+                class="btn btn-primary m-1 btn-hover-effect"
+                >Listening</a
+              >
+              <a
+                href="vocabuary s d.html"
+                class="btn btn-primary m-1 btn-hover-effect"
+                >Vocabulary</a
+              >
+              <a
+                href="test s d.html"
+                class="btn btn-primary m-1 btn-hover-effect"
+                >Test</a
+              >
+              <a
+                href="writing s d.html"
+                class="btn btn-primary m-1 btn-hover-effect"
+                >Writing</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Web Developer -->
+        <div class="col">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <div class="card-icon"><i class="bi bi-globe"></i></div>
+              <h5 class="card-title">Web Developer</h5>
+              <p class="card-text">
+                Англійська для вебтехнологій, front-end та back-end
+                термінології.
+              </p>
+              <a
+                href="grammar w d.html"
+                class="btn btn-primary m-1 btn-hover-effect"
+                >Grammar</a
+              >
+              <a
+                href="speaking w d.html"
+                class="btn btn-primary m-1 btn-hover-effect"
+                >Speaking</a
+              >
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Listening</a
+              >
+              <a
+                href="vocabuary w d.html"
+                class="btn btn-primary m-1 btn-hover-effect"
+                >Vocabulary</a
+              >
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect">Test</a>
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Writing</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Manager -->
+        <div class="col">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <div class="card-icon"><i class="bi bi-people-fill"></i></div>
+              <h5 class="card-title">Project Manager</h5>
+              <p class="card-text">
+                Комунікація, Agile, Scrum, листування з замовниками — все
+                англійською!
+              </p>
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Grammar</a
+              >
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Speaking</a
+              >
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Listening</a
+              >
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Vocabulary</a
+              >
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect">Test</a>
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Writing</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Data Scientist -->
+        <div class="col">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <div class="card-icon">
+                <i class="bi bi-bar-chart-line-fill"></i>
+              </div>
+              <h5 class="card-title">Data Scientist</h5>
+              <p class="card-text">
+                Мова для аналітики, досліджень, звітів і презентацій
+                результатів.
+              </p>
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Grammar</a
+              >
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Speaking</a
+              >
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Listening</a
+              >
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Vocabulary</a
+              >
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect">Test</a>
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Writing</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Cybersecurity Specialist -->
+        <div class="col">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <div class="card-icon">
+                <i class="bi bi-shield-lock-fill"></i>
+              </div>
+              <h5 class="card-title">Cybersecurity Specialist</h5>
+              <p class="card-text">
+                Англійська для безпеки, політик, аудитів, інцидентів.
+              </p>
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Grammar</a
+              >
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Speaking</a
+              >
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Listening</a
+              >
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Vocabulary</a
+              >
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect">Test</a>
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Writing</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- QA Engineer -->
+        <div class="col">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <div class="card-icon"><i class="bi bi-bug-fill"></i></div>
+              <h5 class="card-title">QA Engineer</h5>
+              <p class="card-text">
+                Тестування, баг-репорти, документація — англійська критично
+                важлива.
+              </p>
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Grammar</a
+              >
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Speaking</a
+              >
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Listening</a
+              >
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Vocabulary</a
+              >
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect">Test</a>
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Writing</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Business Analyst -->
+        <div class="col">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <div class="card-icon">
+                <i class="bi bi-clipboard-data-fill"></i>
+              </div>
+              <h5 class="card-title">Business Analyst</h5>
+              <p class="card-text">
+                Комунікація з клієнтами, бізнес-запити, документи — все
+                англійською.
+              </p>
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Grammar</a
+              >
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Speaking</a
+              >
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Listening</a
+              >
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Vocabulary</a
+              >
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect">Test</a>
+              <a href="#" class="btn btn-primary m-1 btn-hover-effect"
+                >Writing</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT Fluency - Vocabulary Flashcards</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      body {
+        background-color: #f0f2f5;
+      }
+      .guide-section {
+        border: 2px solid #0d6efd;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 15px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.6s ease;
+      }
+      .guide-section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .flashcard-container {
+        perspective: 1000px;
+        margin-bottom: 20px;
+      }
+      .flashcard {
+        width: 100%;
+        height: 170px;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        position: relative;
+        cursor: pointer;
+        border: 2px solid #6c757d;
+        border-radius: 10px;
+      }
+      .flashcard.flip {
+        transform: rotateY(180deg);
+      }
+      .flashcard-front,
+      .flashcard-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 1rem;
+      }
+      .flashcard-front {
+        background-color: #ffffff;
+        color: #000;
+      }
+      .flashcard-back {
+        background-color: #0d6efd;
+        color: white;
+        transform: rotateY(180deg);
+      }
+      h2 {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        color: #0d6efd;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">IT Fluency</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="/">Головна</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="про нас.html">Про нас</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+                >Курси</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+      <h1 class="fw-bold text-center mb-4">
+        Vocabulary Guide for Web Developer
+      </h1>
+
+      <div class="guide-section">
+        <h2>General terms</h2>
+
+        <div class="flashcard-container">
+          <div class="flashcard">
+            <div class="flashcard-front">
+              <strong>Website</strong>
+            </div>
+            <div class="flashcard-back">
+              вебсайт<br /><br />
+              Example: "I am building a personal website to showcase my
+              portfolio." Переклад: "Я створюю особистий вебсайт, щоб
+              продемонструвати своє портфоліо."​
+            </div>
+          </div>
+        </div>
+
+        <div class="flashcard-container">
+          <div class="flashcard">
+            <div class="flashcard-front">
+              <strong>Web page</strong>
+            </div>
+            <div class="flashcard-back">
+              вебсторінка<br /><br />
+              Example: "Each web page must load quickly to keep users engaged."
+              Переклад: "Кожна вебсторінка повинна швидко завантажуватися, щоб
+              утримати увагу користувачів."​
+            </div>
+          </div>
+        </div>
+
+        <div class="flashcard-container">
+          <div class="flashcard">
+            <div class="flashcard-front"><strong>Domain name</strong></div>
+            <div class="flashcard-back">
+              доменне ім'я<br /><br />
+              Example: "Choosing a short domain name helps users remember your
+              site." Переклад: "Вибір короткого доменного імені допомагає
+              користувачам запам'ятати ваш сайт."​
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flashcard-container">
+        <div class="flashcard">
+          <div class="flashcard-front"><strong>Hosting</strong></div>
+          <div class="flashcard-back">
+            хостинг<br /><br />
+            Example: "We need to buy hosting before launching the website."
+            Переклад: "Нам потрібно придбати хостинг перед запуском вебсайту."​
+          </div>
+        </div>
+      </div>
+
+      <div class="flashcard-container">
+        <div class="flashcard">
+          <div class="flashcard-front"><strong>Frontend</strong></div>
+          <div class="flashcard-back">
+            фронтенд<br /><br />
+            Example: "Frontend developers focus on how the website looks and
+            feels." Переклад: "Фронтенд-розробники зосереджуються на зовнішньому
+            вигляді та взаємодії сайту."​
+          </div>
+        </div>
+      </div>
+
+      <div class="guide-section">
+        <h2>Interface Components</h2>
+
+        <div class="flashcard-container">
+          <div class="flashcard">
+            <div class="flashcard-front"><strong>Hosting</strong></div>
+            <div class="flashcard-back">
+              хостинг<br /><br />
+              Example: "We need to buy hosting before launching the website."
+              Переклад: "Нам потрібно придбати хостинг перед запуском
+              вебсайту."​
+            </div>
+          </div>
+        </div>
+
+        <div class="flashcard-container">
+          <div class="flashcard">
+            <div class="flashcard-front"><strong>Input field</strong></div>
+            <div class="flashcard-back">
+              Поле введення.<br /><br />
+              "Please enter your email address in the input field." ➤ Введіть
+              електронну адресу в поле введення.
+            </div>
+          </div>
+        </div>
+
+        <div class="flashcard-container">
+          <div class="flashcard">
+            <div class="flashcard-front"><strong>Dropdown</strong></div>
+            <div class="flashcard-back">
+              Випадаючий список.<br /><br />
+              "Add a dropdown menu for language selection." ➤ Додати випадаючий
+              список для вибору мови.
+            </div>
+          </div>
+        </div>
+
+        <div class="flashcard-container">
+          <div class="flashcard">
+            <div class="flashcard-front"><strong>Checkbox</strong></div>
+            <div class="flashcard-back">
+              Чекбокс.<br /><br />
+              "Tick the checkbox to agree to the terms and conditions." ➤
+              Позначити чекбокс для погодження з умовами.
+            </div>
+          </div>
+        </div>
+
+        <div class="flashcard-container">
+          <div class="flashcard">
+            <div class="flashcard-front"><strong>Toggle</strong></div>
+            <div class="flashcard-back">
+              Перемикач.<br /><br />
+              "Use the toggle to switch between dark and light mode." ➤
+              Перемикач режиму світла/темряви.
+            </div>
+          </div>
+        </div>
+
+        <div class="container mt-4">
+          <div class="guide-section">
+            <h2>UX Design</h2>
+
+            <div class="flashcard-container">
+              <div class="flashcard">
+                <div class="flashcard-front"><strong>User flow</strong></div>
+                <div class="flashcard-back">
+                  Потік користувача.<br /><br />
+                  "Map the user flow for the registration process." ➤ Побудуй
+                  потік користувача для процесу реєстрації.
+                </div>
+              </div>
+            </div>
+
+            <div class="flashcard-container">
+              <div class="flashcard">
+                <div class="flashcard-front"><strong>Wireframe</strong></div>
+                <div class="flashcard-back">
+                  Каркас/макет.<br /><br />
+                  "Let's create a wireframe before moving to the high-fidelity
+                  design." ➤ Створимо каркас перед детальним дизайном.
+                </div>
+              </div>
+            </div>
+
+            <div class="flashcard-container">
+              <div class="flashcard">
+                <div class="flashcard-front"><strong>Prototype</strong></div>
+                <div class="flashcard-back">
+                  Прототип.<br /><br />
+                  "This clickable prototype will help us test the navigation
+                  early." ➤ Клікабельний прототип допоможе ранньому тестуванню
+                  навігації.
+                </div>
+              </div>
+            </div>
+
+            <div class="flashcard-container">
+              <div class="flashcard">
+                <div class="flashcard-front"><strong>Persona</strong></div>
+                <div class="flashcard-back">
+                  Персона користувача.<br /><br />
+                  "We designed this feature based on our user persona 'Anna'." ➤
+                  Ми розробили цю функцію виходячи з персони Анни.
+                </div>
+              </div>
+            </div>
+
+            <div class="flashcard-container">
+              <div class="flashcard">
+                <div class="flashcard-front"><strong>A/B Testing</strong></div>
+                <div class="flashcard-back">
+                  A/B тестування.<br /><br />
+                  "We ran an A/B test to choose the best button color." ➤ Ми
+                  провели A/B тест для вибору кращої кнопки.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="guide-section">
+            <h2>UI Practices</h2>
+
+            <div class="flashcard-container">
+              <div class="flashcard">
+                <div class="flashcard-front"><strong>Typography</strong></div>
+                <div class="flashcard-back">
+                  Типографіка.<br /><br />
+                  "Use consistent typography across all pages." ➤ Однакова
+                  типографіка на всіх сторінках.
+                </div>
+              </div>
+            </div>
+
+            <div class="flashcard-container">
+              <div class="flashcard">
+                <div class="flashcard-front"><strong>Hierarchy</strong></div>
+                <div class="flashcard-back">
+                  Ієрархія.<br /><br />
+                  "We adjusted the hierarchy to highlight call-to-action." ➤ Ми
+                  скоригували ієрархію для підкреслення CTA.
+                </div>
+              </div>
+            </div>
+
+            <div class="flashcard-container">
+              <div class="flashcard">
+                <div class="flashcard-front"><strong>White space</strong></div>
+                <div class="flashcard-back">
+                  Порожній простір.<br /><br />
+                  "Add more white space to improve readability." ➤ Додати більше
+                  простору для кращого сприйняття.
+                </div>
+              </div>
+            </div>
+
+            <div class="flashcard-container">
+              <div class="flashcard">
+                <div class="flashcard-front"><strong>Contrast</strong></div>
+                <div class="flashcard-back">
+                  Контраст.<br /><br />
+                  "Increase contrast between text and background." ➤ Підвищити
+                  контраст між текстом і фоном.
+                </div>
+              </div>
+            </div>
+
+            <div class="flashcard-container">
+              <div class="flashcard">
+                <div class="flashcard-front"><strong>Consistency</strong></div>
+                <div class="flashcard-back">
+                  Послідовність.<br /><br />
+                  "Ensure consistency across all navigation menus." ➤
+                  Забезпечити послідовність навігації.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="guide-section">
+            <h2>Process and Tools</h2>
+
+            <div class="flashcard-container">
+              <div class="flashcard">
+                <div class="flashcard-front">
+                  <strong>Design system</strong>
+                </div>
+                <div class="flashcard-back">
+                  Дизайн-система.<br /><br />
+                  "We use a design system to ensure consistency." ➤
+                  Використовуємо дизайн-систему для узгодженості.
+                </div>
+              </div>
+            </div>
+
+            <div class="flashcard-container">
+              <div class="flashcard">
+                <div class="flashcard-front"><strong>Component</strong></div>
+                <div class="flashcard-back">
+                  Компонент.<br /><br />
+                  "Each button is a reusable component." ➤ Кожна кнопка — це
+                  компонент.
+                </div>
+              </div>
+            </div>
+
+            <div class="flashcard-container">
+              <div class="flashcard">
+                <div class="flashcard-front">
+                  <strong>Responsive design</strong>
+                </div>
+                <div class="flashcard-back">
+                  Адаптивний дизайн.<br /><br />
+                  "Responsive design ensures usability across devices." ➤
+                  Адаптивний дизайн забезпечує зручність на всіх пристроях.
+                </div>
+              </div>
+            </div>
+
+            <div class="flashcard-container">
+              <div class="flashcard">
+                <div class="flashcard-front"><strong>Grid system</strong></div>
+                <div class="flashcard-back">
+                  Сітка.<br /><br />
+                  "Use the 12-column grid system for layout." ➤ Використання
+                  12-колонної сітки для макетів.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="guide-section">
+            <h2>Communication</h2>
+
+            <div class="flashcard-container">
+              <div class="flashcard">
+                <div class="flashcard-front"><strong>Feedback</strong></div>
+                <div class="flashcard-back">
+                  Зворотній зв'язок.<br /><br />
+                  "The client gave positive feedback." ➤ Клієнт дав позитивний
+                  фідбек.
+                </div>
+              </div>
+            </div>
+
+            <div class="flashcard-container">
+              <div class="flashcard">
+                <div class="flashcard-front"><strong>Deliverables</strong></div>
+                <div class="flashcard-back">
+                  Робочі матеріали.<br /><br />
+                  "All deliverables must be ready by Friday." ➤ Всі матеріали
+                  мають бути готові до п'ятниці.
+                </div>
+              </div>
+            </div>
+
+            <div class="flashcard-container">
+              <div class="flashcard">
+                <div class="flashcard-front"><strong>Deadline</strong></div>
+                <div class="flashcard-back">
+                  Кінцевий термін.<br /><br />
+                  "We need to finalize before the deadline." ➤ Потрібно
+                  завершити до кінцевого терміну.
+                </div>
+              </div>
+            </div>
+
+            <div class="flashcard-container">
+              <div class="flashcard">
+                <div class="flashcard-front"><strong>Revision</strong></div>
+                <div class="flashcard-back">
+                  Перегляд, правка.<br /><br />
+                  "The client asked for a revision of colors." ➤ Клієнт попросив
+                  переглянути кольори.
+                </div>
+              </div>
+            </div>
+
+            <div class="flashcard-container">
+              <div class="flashcard">
+                <div class="flashcard-front"><strong>Handoff</strong></div>
+                <div class="flashcard-back">
+                  Передача дизайну розробникам.<br /><br />
+                  "Make sure components are labeled before handoff." ➤
+                  Переконайтеся, що всі компоненти підписані перед передачею.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Анімація появи секцій
+      const sections = document.querySelectorAll(".guide-section");
+      window.addEventListener("scroll", () => {
+        const triggerBottom = window.innerHeight * 0.9;
+        sections.forEach((section) => {
+          const top = section.getBoundingClientRect().top;
+          if (top < triggerBottom) {
+            section.classList.add("visible");
+          }
+        });
+      });
+
+      // Перевернення флешкарт
+      const flashcards = document.querySelectorAll(".flashcard");
+      flashcards.forEach((card) => {
+        card.addEventListener("click", () => {
+          card.classList.toggle("flip");
+        });
+      });
+    </script>
+  </body>
+</html>

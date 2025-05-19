@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IT Fluency Test</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+      .question {
+        margin-bottom: 30px;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .btn-answer {
+        margin: 5px 0;
+      }
+      .correct {
+        background-color: #198754;
+        color: white;
+      }
+      .wrong {
+        background-color: #dc3545;
+        color: white;
+      }
+      #timer {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #dc3545;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">IT Fluency</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="/">Головна</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="про нас.html">Про нас</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+                >Курси</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1 class="text-center fw-bold mb-5">
+        🎯 Перевір свої знання англійської в ІТ!
+      </h1>
+
+      <div class="text-center mb-4" id="timer">20:00</div>
+
+      <form id="testForm">
+        <div id="questionsList"></div>
+
+        <div class="text-center mt-5">
+          <button
+            type="button"
+            class="btn btn-primary btn-lg"
+            onclick="checkAnswers()"
+          >
+            Перевірити результати
+          </button>
+        </div>
+
+        <div class="text-center mt-3">
+          <h2 id="result"></h2>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      // Таймер
+      let timeLeft = 20 * 60; // 20 хвилин у секундах
+      const timerElement = document.getElementById("timer");
+
+      function updateTimer() {
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerElement.textContent = `${String(minutes).padStart(
+          2,
+          "0"
+        )}:${String(seconds).padStart(2, "0")}`;
+        timeLeft--;
+
+        if (timeLeft < 0) {
+          clearInterval(timerInterval);
+          alert("Час вичерпано!");
+        }
+      }
+
+      const timerInterval = setInterval(updateTimer, 1000);
+      updateTimer();
+
+      // База питань
+      const questions = [
+        // Grammar (5)
+        {
+          question: "Which sentence is correct?",
+          options: [
+            "She work every day.",
+            "She works every day.",
+            "She working every day.",
+          ],
+          correct: 1,
+          explanation:
+            "The correct sentence is 'She works every day.' because we need the third person singular form of the verb 'work'.",
+        },
+        {
+          question: "Choose the passive form:",
+          options: [
+            "The email sends.",
+            "The email is sent.",
+            "The email sending.",
+          ],
+          correct: 1,
+          explanation:
+            "The passive form is 'The email is sent.' because we use 'is' + past participle for passive sentences.",
+        },
+        {
+          question: "Choose the correct modal verb:",
+          options: [
+            "You should to complete the form.",
+            "You should complete the form.",
+            "You should completes the form.",
+          ],
+          correct: 1,
+          explanation:
+            "The correct form is 'You should complete the form.' 'Should' is followed by the base form of the verb.",
+        },
+        {
+          question: "Correct conditional sentence:",
+          options: [
+            "If it will rain, we cancel.",
+            "If it rains, we will cancel.",
+            "If it raining, we will cancel.",
+          ],
+          correct: 1,
+          explanation:
+            "The correct sentence is 'If it rains, we will cancel.' We use the present simple in the if-clause and future simple in the main clause.",
+        },
+        {
+          question: "Choose the correct article:",
+          options: ["a user", "an user", "user"],
+          correct: 0,
+          explanation:
+            "The correct article is 'a' because the word 'user' starts with a consonant sound.",
+        },
+
+        // Listening (5)
+        {
+          question:
+            "You hear: 'Please fill out the registration form.' What should you do?",
+          options: ["Delete the form.", "Complete the form.", "Skip the form."],
+          correct: 1,
+          explanation:
+            "The correct action is to complete the form, as requested in the sentence.",
+        },
+        {
+          question:
+            "You hear: 'The button should be more prominent.' What does it mean?",
+          options: ["Smaller", "Hidden", "More noticeable"],
+          correct: 2,
+          explanation:
+            "'Prominent' means that the button should be more noticeable.",
+        },
+        {
+          question:
+            "You hear: 'The feedback was mostly positive.' How was the feedback?",
+          options: ["Good", "Bad", "Neutral"],
+          correct: 0,
+          explanation: "'Positive' means the feedback was good.",
+        },
+        {
+          question:
+            "You hear: 'The site needs better navigation.' What is required?",
+          options: [
+            "More pages",
+            "Easier to move between pages",
+            "Remove the menu",
+          ],
+          correct: 1,
+          explanation:
+            "The sentence suggests improving navigation, making it easier to move between pages.",
+        },
+        {
+          question:
+            "You hear: 'Update the prototype by Friday.' When should you do it?",
+          options: ["Today", "Tomorrow", "By Friday"],
+          correct: 2,
+          explanation:
+            "The phrase 'by Friday' means that the update should be completed no later than Friday.",
+        },
+
+        // Writing (5)
+        {
+          question: "Which is best for a button label?",
+          options: ["Click here", "Save changes", "Please click this button"],
+          correct: 1,
+          explanation:
+            "'Save changes' is clear and concise for a button label.",
+        },
+        {
+          question: "Which is clearest microcopy for an error?",
+          options: [
+            "Error!",
+            "Something wrong!",
+            "Password must be at least 8 characters.",
+          ],
+          correct: 2,
+          explanation:
+            "'Password must be at least 8 characters.' is clear and provides useful information.",
+        },
+        {
+          question: "How to make UX writing?",
+          options: [
+            "Long sentences",
+            "Short and clear phrases",
+            "No punctuation",
+          ],
+          correct: 1,
+          explanation:
+            "UX writing should be short and clear, to make it easy for users to understand.",
+        },
+        {
+          question: "Best confirmation message?",
+          options: ["It is okay.", "Form submitted successfully!", "Finished."],
+          correct: 1,
+          explanation:
+            "'Form submitted successfully!' is a clear and professional confirmation message.",
+        },
+        {
+          question: "Placeholder for email field?",
+          options: ["Your password", "Enter your email", "Your age"],
+          correct: 1,
+          explanation:
+            "The correct placeholder is 'Enter your email' for an email input field.",
+        },
+
+        // Speaking (5)
+        {
+          question: "You need to ask for clarification. What would you say?",
+          options: [
+            "Repeat please?",
+            "Could you clarify, please?",
+            "What you say?",
+          ],
+          correct: 1,
+          explanation:
+            "'Could you clarify, please?' is a polite way to ask for clarification.",
+        },
+        {
+          question: "How to start presenting design?",
+          options: [
+            "I will now explain our new screens.",
+            "Look at these.",
+            "See this.",
+          ],
+          correct: 0,
+          explanation:
+            "'I will now explain our new screens.' is the most professional way to start a design presentation.",
+        },
+        {
+          question: "Polite way to give feedback?",
+          options: [
+            "Bad design!",
+            "Could we try another layout?",
+            "I hate this.",
+          ],
+          correct: 1,
+          explanation:
+            "'Could we try another layout?' is a polite and constructive way to give feedback.",
+        },
+        {
+          question: "Phrase to accept feedback:",
+          options: ["No way.", "Thanks for the suggestion!", "I know better."],
+          correct: 1,
+          explanation:
+            "'Thanks for the suggestion!' is a polite and open-minded way to accept feedback.",
+        },
+        {
+          question: "Ending a design demo:",
+          options: ["Bye.", "Any questions?", "That's it."],
+          correct: 1,
+          explanation:
+            "'Any questions?' is the most professional way to end a design demo and encourage further discussion.",
+        },
+
+        // Vocabulary (5)
+        {
+          question: "What is 'wireframe'?",
+          options: ["Finished design", "Sketch of layout", "Marketing plan"],
+          correct: 1,
+          explanation:
+            "A wireframe is a basic visual representation of a layout or interface, usually without colors or graphics.",
+        },
+        {
+          question: "What does 'prototype' mean?",
+          options: ["Fake user", "Sample working model", "Color palette"],
+          correct: 1,
+          explanation:
+            "A prototype is a sample working model or early version of a product used to test functionality.",
+        },
+        {
+          question: "Meaning of 'responsive design'?",
+          options: ["Works on all devices", "Only mobile", "Only desktop"],
+          correct: 0,
+          explanation:
+            "Responsive design means that the design works well on all devices, adjusting to different screen sizes.",
+        },
+        {
+          question: "Choose correct term for clickable message box:",
+          options: ["Tooltip", "Button", "Dropdown"],
+          correct: 0,
+          explanation:
+            "A 'tooltip' is a small, clickable message box that appears when you hover over an element.",
+        },
+        {
+          question: "Choose correct for 'navigation bar':",
+          options: ["Sidebar", "Top or side menu", "Content"],
+          correct: 1,
+          explanation:
+            "A navigation bar is typically a top or side menu that helps users navigate a website or application.",
+        },
+      ];
+
+      // Формування запитань
+      function renderQuestions() {
+        const container = document.getElementById("questionsList");
+        questions.forEach((q, index) => {
+          const qBlock = document.createElement("div");
+          qBlock.className = "question";
+          qBlock.innerHTML = `<h5>Q${index + 1}. ${q.question}</h5>`;
+
+          q.options.forEach((option, i) => {
+            qBlock.innerHTML += `
+              <div>
+                <input type="radio" name="q${index}" id="q${index}_${i}" value="${i}">
+                <label for="q${index}_${i}" class="btn btn-outline-primary btn-answer w-100">${option}</label>
+              </div>
+            `;
+          });
+
+          container.appendChild(qBlock);
+        });
+      }
+
+      // Перевірка відповідей
+      function checkAnswers() {
+        let correct = 0;
+        questions.forEach((q, index) => {
+          const selected = document.querySelector(
+            `input[name="q${index}"]:checked`
+          );
+          if (selected && parseInt(selected.value) === q.correct) {
+            correct++;
+            selected.nextElementSibling.classList.add("correct");
+          } else if (selected) {
+            selected.nextElementSibling.classList.add("wrong");
+            // Додаємо пояснення
+            const explanationBlock = document.createElement("div");
+            explanationBlock.className = "mt-2 text-danger";
+            explanationBlock.innerText = `Неправильна відповідь! ${q.explanation}`;
+            selected.parentElement.appendChild(explanationBlock);
+          }
+        });
+
+        document.getElementById(
+          "result"
+        ).innerHTML = `Результат: ${correct} правильних із ${questions.length}`;
+      }
+
+      // Старт
+      renderQuestions();
+    </script>
+  </body>
+</html>

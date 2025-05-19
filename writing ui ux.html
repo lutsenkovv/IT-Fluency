@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WRITING GUIDE для UI/UX Дизайнера</title>
+    <style>
+      .guide-section {
+        border: 2px solid #007bff;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        background-color: #f8f9fa;
+      }
+      .highlight {
+        font-weight: bold;
+        color: #d9534f;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">IT Fluency</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="/">Головна</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="про нас.html">Про нас</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+                >Курси</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-4">
+      <h1 class="fw-bold text-center mb-4">
+        WRITING GUIDE для UI/UX Дизайнера
+      </h1>
+
+      <!-- 1. Коментарі до макетів -->
+      <div class="guide-section">
+        <h3>1. Коментарі до макетів у Figma / Zeplin / XD</h3>
+        <p>
+          📍 <span class="highlight">Мета:</span> пояснити свої рішення,
+          уточнити поведінку елементів, уникнути непорозумінь при handoff’і.
+        </p>
+        <p><strong>Структура коментаря:</strong></p>
+        <ul>
+          <li>Що це? (назва елементу)</li>
+          <li>Навіщо? (роль у функціоналі)</li>
+          <li>Як працює? (логіка, взаємодія)</li>
+        </ul>
+        <p>
+          <strong>Приклад:</strong> This CTA button is the main action on the
+          page. It uses brand color to draw attention and scrolls the user to
+          the contact form section.
+        </p>
+        <p>
+          Ця кнопка заклику до дії є головною на сторінці. Вона використовує
+          брендований колір для привернення уваги й прокручує до контактної
+          форми.
+        </p>
+      </div>
+
+      <!-- 2. Функціональні описи -->
+      <div class="guide-section">
+        <h3>2. Функціональні описи: як працює елемент</h3>
+        <p>
+          📍 <span class="highlight">Мета:</span> пояснити поведінку інтерфейсу,
+          особливо в інтерактивних елементах.
+        </p>
+        <p><strong>Формула:</strong> If the user [дія], then [результат].</p>
+        <p>
+          <strong>Приклад:</strong> If the user enters an invalid email, an
+          error message appears below the input field.
+        </p>
+        <p>
+          📌 Уникай неясних описів типу "щось відкривається". Пиши чітко: що,
+          коли, де саме.
+        </p>
+      </div>
+
+      <!-- 3. User Stories -->
+      <div class="guide-section">
+        <h3>3. User Stories</h3>
+        <p>
+          📍 <span class="highlight">Мета:</span> чітко показати потребу
+          користувача і результат очікуваної дії.
+        </p>
+        <p>
+          <strong>Шаблон:</strong> As a [тип користувача], I want to [мета], so
+          that [результат].
+        </p>
+        <p>
+          <strong>Приклад:</strong> As a guest user, I want to browse products
+          without signing up, so that I can decide whether the app suits me.
+        </p>
+        <p>📌 Це не тільки UX-документ — це основа для прийняття рішень!</p>
+      </div>
+
+      <!-- 4. UI-тексти (Microcopy) -->
+      <div class="guide-section">
+        <h3>4. UI-тексти (Microcopy)</h3>
+        <p>
+          📍 <span class="highlight">Мета:</span> створити короткі, чіткі та
+          зрозумілі тексти для взаємодії з інтерфейсом.
+        </p>
+        <p><strong>Типові елементи:</strong></p>
+        <ul>
+          <li>Кнопки: Start now, Save changes, Cancel.</li>
+          <li>
+            Повідомлення: Form submitted successfully. / Please enter a valid
+            password.
+          </li>
+          <li>Підказки (placeholder): Search by keyword...</li>
+        </ul>
+        <p><strong>Рекомендації:</strong></p>
+        <ul>
+          <li>Використовуй дієслова: Get started, Try free, Learn more.</li>
+          <li>Уникай жаргону або слів, які розуміють лише технічні люди.</li>
+          <li>Якщо є помилка — поясни, що робити далі.</li>
+        </ul>
+      </div>
+
+      <!-- 5. E-mail листування -->
+      <div class="guide-section">
+        <h3>5. E-mail листування</h3>
+        <p>
+          📍 <span class="highlight">Мета:</span> надсилати чіткі, ввічливі та
+          конструктивні повідомлення команді або клієнту.
+        </p>
+        <p><strong>Типова структура листа:</strong></p>
+        <ul>
+          <li>Привітання</li>
+          <li>Суть / оновлення</li>
+          <li>Дії, які очікуються</li>
+          <li>Закінчення + подяка</li>
+        </ul>
+        <p>
+          <strong>Приклад:</strong> Subject: Updated Designs – Homepage &
+          Mobile<br />
+          Hi John, I've uploaded the latest homepage and mobile designs to
+          Figma. Please review and let me know if any revisions are needed.<br />
+          Thanks, Anna
+        </p>
+        <p>
+          📌 Використовуй чіткі заголовки тем: Design Review Needed, Quick
+          Question: CTA Button, Figma Update Inside.
+        </p>
+      </div>
+
+      <!-- 6. Handoff Notes -->
+      <div class="guide-section">
+        <h3>6. Handoff Notes — передача дизайну розробникам</h3>
+        <p>
+          📍 <span class="highlight">Мета:</span> детально описати, як працюють
+          компоненти, які стилі використано, які інтерекції потрібні.
+        </p>
+        <p><strong>Приклад:</strong></p>
+        <ul>
+          <li>Component: CTA button</li>
+          <li>Font: Inter Bold 16px</li>
+          <li>Color: #3366FF</li>
+          <li>Padding: 12px 24px</li>
+          <li>Hover state: background #2244CC</li>
+          <li>Action: scrolls to Contact section</li>
+        </ul>
+        <p>
+          📌 Структуруй опис для швидкого сканування: Назва – Стиль – Дії –
+          Поведінка.
+        </p>
+      </div>
+
+      <!-- 7. Фідбек і відповіді на правки -->
+      <div class="guide-section">
+        <h3>7. Фідбек і відповіді на правки</h3>
+        <p>
+          📍 <span class="highlight">Мета:</span> конструктивно приймати або
+          давати коментарі.
+        </p>
+
+        <p><strong>Як ввічливо дати фідбек:</strong></p>
+        <ul>
+          <li>Could we try a lighter color for this section?</li>
+          <li>
+            This layout works well, but perhaps we can reduce the padding.
+          </li>
+        </ul>
+
+        <p><strong>Як відповісти на фідбек:</strong></p>
+        <ul>
+          <li>
+            Thanks for the suggestion — I’ve updated the font size accordingly.
+          </li>
+          <li>I tried a few variations and kept the one that tested best.</li>
+        </ul>
+
+        <p>
+          📌 Завжди уникай фраз "I don’t like" → краще "This might work better
+          if…"
+        </p>
+      </div>
+
+      <!-- 8. Підказки -->
+      <div class="guide-section">
+        <h3>ПІДКАЗКИ</h3>
+        <ul>
+          <li>
+            <strong>Завжди став користувача на перше місце:</strong> що він
+            побачить, зробить, відчує.
+          </li>
+          <li>
+            <strong>Перевіряй свої тексти:</strong> короткі, без надлишку
+            складної граматики.
+          </li>
+          <li>
+            <strong>Пиши як дизайнер:</strong> чітко, логічно, функціонально.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
